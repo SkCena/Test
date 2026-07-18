@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Akram — Digital Craftsman</title>
+<meta name="description" content="Akram builds websites, browser games, and Android mods — engineered from raw idea to working product." />
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- Grain / noise overlay -->
+<div class="grain"></div>
+
+<!-- Custom cursor -->
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- Persistent 3D canvas -->
+<canvas id="webgl"></canvas>
+
+<!-- Progress thread -->
+<div class="thread" id="thread"><div class="thread-fill" id="threadFill"></div></div>
+
+<!-- NAV -->
+<nav class="nav">
+  <a href="#top" class="nav-mark">AK<span>.</span></a>
+  <div class="nav-links">
+    <a href="#work" data-cursor="hover">Work</a>
+    <a href="#craft" data-cursor="hover">Craft</a>
+    <a href="#process" data-cursor="hover">Process</a>
+    <a href="#contact" class="nav-cta" data-cursor="hover">Start a project</a>
+  </div>
+  <button class="nav-burger" id="navBurger" aria-label="Menu"><span></span></button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#work">Work</a>
+  <a href="#craft">Craft</a>
+  <a href="#process">Process</a>
+  <a href="#contact">Start a project</a>
+</div>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="hero">
+    <div class="hero-inner">
+      <p class="eyebrow mono">Full-stack builder · Bhubaneswar, India</p>
+      <h1 class="hero-title">
+        <span class="line">Idea is <em>chaos.</em></span>
+        <span class="line">I give it <em>structure.</em></span>
+      </h1>
+      <p class="hero-sub">Akram — I design and build websites, browser games, and Android tools. Every project starts scattered. It doesn't stay that way.</p>
+      <div class="hero-actions">
+        <a href="#work" class="btn btn-primary" data-cursor="hover"><span>See the work</span></a>
+        <a href="#contact" class="btn btn-ghost" data-cursor="hover"><span>Start a project</span></a>
+      </div>
+    </div>
+    <div class="scroll-hint mono">
+      <span>scroll to assemble</span>
+      <div class="scroll-hint-line"></div>
+    </div>
+  </section>
+
+  <!-- ============ CRAFT / ABOUT ============ -->
+  <section class="craft" id="craft">
+    <div class="section-head">
+      <p class="eyebrow mono">01 — What I build</p>
+      <h2>Four disciplines. <br/>One way of thinking.</h2>
+    </div>
+    <div class="craft-grid">
+      <article class="craft-card" data-cursor="hover">
+        <span class="craft-index mono">/web</span>
+        <h3>Websites that convert</h3>
+        <p>Fast, responsive sites for local businesses — built to load quick and rank well, not just look nice in a mockup.</p>
+      </article>
+      <article class="craft-card" data-cursor="hover">
+        <span class="craft-index mono">/games</span>
+        <h3>Browser-based games</h3>
+        <p>Playable in a tab, no install, no friction. Built for the moment someone clicks a link and expects something to happen instantly.</p>
+      </article>
+      <article class="craft-card" data-cursor="hover">
+        <span class="craft-index mono">/android</span>
+        <h3>APK modding & tools</h3>
+        <p>Deep Android customization — modified builds, device tuning, and tools that do what the stock OS won't.</p>
+      </article>
+      <article class="craft-card" data-cursor="hover">
+        <span class="craft-index mono">/ai</span>
+        <h3>AI-assisted content</h3>
+        <p>Using AI as a tool in the pipeline, not a gimmick bolted on — for content, prototyping, and speeding up the build itself.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ WORK — horizontal gallery ============ -->
+  <section class="work" id="work">
+    <div class="section-head">
+      <p class="eyebrow mono">02 — Selected work</p>
+      <h2>Shipped, not just designed.</h2>
+    </div>
+    <div class="work-track-wrap">
+      <div class="work-track" id="workTrack">
+
+        <article class="work-card" data-cursor="hover">
+          <div class="work-card-visual" data-tilt>
+            <div class="work-card-glow"></div>
+            <span class="work-card-glyph mono">₹</span>
+          </div>
+          <div class="work-card-info">
+            <h3>EMI Calculator</h3>
+            <p class="mono">Web App · PWA</p>
+            <p>A fast, installable loan calculator with multi-language support and clean SEO — built so numbers make sense at a glance.</p>
+          </div>
+        </article>
+
+        <article class="work-card" data-cursor="hover">
+          <div class="work-card-visual" data-tilt>
+            <div class="work-card-glow"></div>
+            <span class="work-card-glyph mono">🌿</span>
+          </div>
+          <div class="work-card-info">
+            <h3>Tulsi</h3>
+            <p class="mono">Offline-first · Health</p>
+            <p>A personal health companion with a hand-drawn SVG plant that grows with you — works fully offline, no account needed.</p>
+          </div>
+        </article>
+
+        <article class="work-card" data-cursor="hover">
+          <div class="work-card-visual" data-tilt>
+            <div class="work-card-glow"></div>
+            <span class="work-card-glyph mono">◧</span>
+          </div>
+          <div class="work-card-info">
+            <h3>Local business sites</h3>
+            <p class="mono">Web · Multiple clients</p>
+            <p>Ongoing work building and maintaining sites for local businesses — from first draft to the site that actually goes live.</p>
+          </div>
+        </article>
+
+        <article class="work-card work-card-cta" data-cursor="hover">
+          <div class="work-card-info">
+            <h3>Yours, next.</h3>
+            <p>Got something that needs building?</p>
+            <a href="#contact" class="btn btn-primary btn-small"><span>Let's talk</span></a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+    <p class="work-hint mono">drag to explore →</p>
+  </section>
+
+  <!-- ============ PROCESS ============ -->
+  <section class="process" id="process">
+    <div class="section-head">
+      <p class="eyebrow mono">03 — How it comes together</p>
+      <h2>From scatter to structure.</h2>
+    </div>
+    <div class="process-list">
+      <div class="process-item" data-cursor="hover">
+        <span class="process-num mono">01</span>
+        <div>
+          <h3>Understand</h3>
+          <p>What are we actually solving, for who, and what does "done" look like.</p>
+        </div>
+      </div>
+      <div class="process-item" data-cursor="hover">
+        <span class="process-num mono">02</span>
+        <div>
+          <h3>Build fast, rough</h3>
+          <p>A working version beats a perfect plan. I build early so we can react to something real.</p>
+        </div>
+      </div>
+      <div class="process-item" data-cursor="hover">
+        <span class="process-num mono">03</span>
+        <div>
+          <h3>Refine in the open</h3>
+          <p>You see progress as it happens, not a reveal at the end. No surprises either way.</p>
+        </div>
+      </div>
+      <div class="process-item" data-cursor="hover">
+        <span class="process-num mono">04</span>
+        <div>
+          <h3>Ship it</h3>
+          <p>Live, tested, and handed off in a state you can actually maintain or extend.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="contact" id="contact">
+    <div class="contact-inner">
+      <p class="eyebrow mono">04 — Let's build</p>
+      <h2>Have something<br/>worth making?</h2>
+      <p class="contact-sub">Tell me what you're trying to build. I'll tell you honestly if I'm the right person for it.</p>
+      <a href="mailto:hello@akram.dev" class="contact-email" data-cursor="hover">hello@akram.dev</a>
+      <div class="contact-links mono">
+        <a href="#" data-cursor="hover">Fiverr</a>
+        <span>·</span>
+        <a href="#" data-cursor="hover">GitHub</a>
+        <span>·</span>
+        <a href="#" data-cursor="hover">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p class="mono">© 2026 Akram. Built from scratch, on purpose.</p>
+    <a href="#top" class="footer-top mono" data-cursor="hover">back to top ↑</a>
+  </footer>
+
+</main>
+
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdnjs.cloudflare.com/ajax/libs/three.js/0.160.0/three.module.js"
+  }
+}
+</script>
+<script type="module" src="scene.js"></script>
+<script type="module" src="app.js"></script>
+</body>
+</html>
